@@ -119,12 +119,14 @@
     <ClCompile Include="LMusic.cpp" />
     <ClCompile Include="LTexture.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Pong.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Collisions.h" />
     <ClInclude Include="GameSystem.h" />
     <ClInclude Include="LMusic.h" />
     <ClInclude Include="LTexture.h" />
+    <ClInclude Include="Pong.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

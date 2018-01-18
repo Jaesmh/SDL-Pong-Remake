@@ -8,29 +8,22 @@ Collisions::Collisions()
 
 bool Collisions::CheckCollisions(SDL_Rect Ball, SDL_Rect Paddle)
 {
-	TopA = Ball.y;
-	BottomA = Ball.y + Ball.h;
-	LeftA = Ball.x;
-	RightA = Ball.x + Ball.w;
-	
-	TopB = Paddle.y;
-	BottomB = Paddle.y + Paddle.h;
-	LeftB = Paddle.x;
-	RightB = Paddle.y + Paddle.h;
+	int TopA = Ball.y, BottomA = Ball.y + Ball.h, LeftA = Ball.x, RightA = Ball.x + Ball.w;
+	int TopB = Paddle.y, BottomB = Paddle.y + Paddle.h, LeftB = Paddle.x, RightB = Paddle.x + Paddle.w;
 
 	if (TopA >= TopB)
 	{
-		return Collided;
+		return false;
 	}
 	
 	if (BottomA >= BottomB)
 	{
-		return Collided;
+		return false;
 	}
 
 	if (LeftA >= LeftB)
 	{
-		return Collided;
+		return false;
 	}
 
 	if (RightA >= RightB)
