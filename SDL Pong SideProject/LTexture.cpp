@@ -25,6 +25,12 @@ void LTexture::Draw(SDL_Renderer* Renderer, SDL_Rect &src, SDL_Texture* tex, SDL
 	SDL_RenderCopy(Renderer, tex, &src, &dst);
 }
 
+void LTexture::Draw(SDL_Renderer * Renderer, SDL_Rect dst)
+{
+	SDL_SetRenderDrawColor(Renderer, 0, 0, 0, 0);
+	SDL_RenderFillRect(Renderer, &dst);
+}
+
 void LTexture::Free(SDL_Surface* Surface)
 {
 	SDL_FreeSurface(Surface);

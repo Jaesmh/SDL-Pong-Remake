@@ -14,9 +14,8 @@ protected:
 	int Paddle2X, Paddle2Y, Paddle2W, Paddle2H = NULL;
 	int BallVelX, BallVelY = NULL;
 public:
-	Pong(const GameSystem& GameSys);
+	Pong(const GameSystem& GameSys, int P1X, int P1Y, int P1W, int P1H, int P2X, int P2Y, int P2W, int P2H, int BW, int BH);
 	~Pong();
-	void PongInit(int P1X, int P1Y, int P1W, int P1H, int P2X, int P2Y, int P2W, int P2H, int BW, int BH);
 	void PollEvents();
 	void BallCollisions();
 	void Draw();

@@ -1,30 +1,16 @@
 #include "Pong.h"
 #include "Collisions.h"
+#include "LTexture.h"
 
-Pong::Pong(const GameSystem& GameSys)
-	:GameSystem(GameSys)
+Pong::Pong(const GameSystem& GameSys, int P1X, int P1Y, int P1W, int P1H, int P2X, int P2Y, int P2W, int P2H, int BW, int BH)
+	:GameSystem(GameSys),Paddle1X(P1X),Paddle2X(P2X),Paddle1Y(P1Y),Paddle2Y(P2Y),Paddle1W(P1W), Paddle2W(P2W),Paddle1H(P1H),
+	Paddle2H(P2H), BallW(BW), BallH(BH)
 {
 }
 
 Pong::~Pong()
 {
 	SDL_DestroyTexture(BallTexture);
-}
-
-void Pong::PongInit(int P1X, int P1Y, int P1W, int P1H, int P2X, int P2Y, int P2W, int P2H, int BW, int BH)
-{
-	Paddle1X = P1X;
-	Paddle1Y = P1Y;
-	Paddle1W = P1W;
-	Paddle1H = P1H;
-
-	Paddle2X = P2X;
-	Paddle2Y = P2Y;
-	Paddle2W = P2W;
-	Paddle2H = P2H;
-
-	BallW = BW;
-	BallH = BH;
 }
 
 void Pong::PollEvents()
@@ -67,8 +53,5 @@ void Pong::BallCollisions()
 
 void Pong::Draw() 
 {
-	BallX += BallVelX += BallMovement(2, 0);
-	Paddle1 = { Paddle1X, Paddle1Y, Paddle1W, Paddle1H };
-	Paddle2 = { Paddle2X, Paddle2Y, Paddle2W, Paddle2H };
-	Ball = { BallX, BallY, BallW, BallH };
+    
 }

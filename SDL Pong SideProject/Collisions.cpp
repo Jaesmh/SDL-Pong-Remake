@@ -28,8 +28,8 @@ bool Collisions::CheckCollisions(SDL_Rect Ball, SDL_Rect Paddle)
 
 	if (RightA >= RightB)
 	{
-		return Collided;
+		return false;
 	}
 
-	return Collided = true;
+	return true;
 }
