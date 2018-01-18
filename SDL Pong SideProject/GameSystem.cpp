@@ -1,4 +1,5 @@
 #include "GameSystem.h"
+#include "LMusic.h"
 
 GameSystem::GameSystem(const std::string & Title, int XWinPos, int YWinPos, int Width, int Height, bool FullScreen)
 	:_Title(Title), _XWinPos(XWinPos), _YWinPos(YWinPos), _Width(Width), _Height(Height), _FullScreen(FullScreen)
@@ -25,7 +26,6 @@ GameSystem::~GameSystem()
 
 void GameSystem::PollEvents()
 {
-	SDL_ShowCursor(SDL_DISABLE);
 
 	if (SDL_PollEvent(&Event))
 	{
@@ -112,6 +112,14 @@ bool GameSystem::Initialize()
 		std::cerr << "SDL_mixer failed to initiaize..." << SDL_GetError() << std::endl;
 	}
 
+	if (TTF_Init() == -1)
+	{
+		std::cerr << "SDL_TTF failed to initialize..." << SDL_GetError() << std::endl;
+		_IsClosed = true;
+		_Success = false;
+		return _Success;
+	}
+
 	if (_Success == true)
 	{
 		std::cout << "Program ran without error!" << std::endl;
@@ -136,4 +144,9 @@ void GameSystem::ShutDown() const
 	IMG_Quit();
 	TTF_Quit();
 	SDL_Quit();
+}
+
+void GameSystem::PlayMusic()
+{
+	PongMusic = LMusic::LoadMusic(PongMusic, "Assets/Music/Music/Pong Music.mp3");
 }

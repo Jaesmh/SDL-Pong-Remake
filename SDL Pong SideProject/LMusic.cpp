@@ -22,14 +22,16 @@ void LMusic::PlayMusic(Mix_Music * Music)
 	}
 }
 
-void LMusic::LoadMusic(Mix_Music * Music, const std::string file_path)
+Mix_Music* LMusic::LoadMusic(Mix_Music * Music, const std::string file_path)
 {
 	Music = Mix_LoadMUS(file_path.c_str());
+	return Music;
 }
 
-void LMusic::LoadChunk(Mix_Chunk * Chunk, const std::string file_path)
+Mix_Chunk* LMusic::LoadChunk(Mix_Chunk * Chunk, const std::string file_path)
 {
 	Chunk = Mix_LoadWAV(file_path.c_str());
+	return Chunk;
 }
 
 void LMusic::FreeMusic(Mix_Music * Music)
