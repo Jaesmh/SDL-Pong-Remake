@@ -24,7 +24,6 @@ public:
 	virtual void PollEvents();
 	void Render() const;
 	void ShutDown() const;
-	void PlayMusic();
 private:
 	int _WINFlag = SDL_WINDOW_FULLSCREEN_DESKTOP;
 	bool _FullScreen = false;
