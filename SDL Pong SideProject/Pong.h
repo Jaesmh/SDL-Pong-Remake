@@ -18,6 +18,7 @@ public:
 	~Pong();
 	void PollEvents();
 	void BallCollisions();
+	void AIPaddle();
 	void Draw();
 	inline int BallMovement(int Max, int Min) { return rand() % Max + rand() % Min; }
 };
