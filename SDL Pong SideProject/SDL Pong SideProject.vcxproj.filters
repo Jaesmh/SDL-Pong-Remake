@@ -24,12 +24,18 @@
     <ClCompile Include="LTexture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LMusic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LMusic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
