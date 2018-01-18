@@ -3,6 +3,7 @@
 #include <Windows.h>
 #include <SDL.h>
 #include "GameSystem.h"
+#include "LMusic.h"
 
 using namespace std;
 
@@ -10,6 +11,9 @@ int main(int argc, char **argv)
 {
 
 	GameSystem* GameSys = new GameSystem("Pong Remake", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 540, 540, false);
+	LMusic Lmusic;
+
+	GameSys->PlayMusic();
 
 	while (GameSys->IsClosed() == false)
 	{

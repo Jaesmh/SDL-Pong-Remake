@@ -26,7 +26,6 @@ public:
 	void ShutDown() const;
 	void PlayMusic();
 private:
-	Mix_Music* PongMusic = nullptr;
 	int _WINFlag = SDL_WINDOW_FULLSCREEN_DESKTOP;
 	bool _FullScreen = false;
 	int &_Width, &_Height;

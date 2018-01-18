@@ -2,6 +2,7 @@
 
 LMusic::LMusic()
 {
+	Mix_Volume(30, -1);
 }
 
 void LMusic::PlayChunk(Mix_Chunk * Chunk)

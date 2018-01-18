@@ -1,5 +1,4 @@
 #include "GameSystem.h"
-#include "LMusic.h"
 
 GameSystem::GameSystem(const std::string & Title, int XWinPos, int YWinPos, int Width, int Height, bool FullScreen)
 	:_Title(Title), _XWinPos(XWinPos), _YWinPos(YWinPos), _Width(Width), _Height(Height), _FullScreen(FullScreen)
@@ -144,9 +143,4 @@ void GameSystem::ShutDown() const
 	IMG_Quit();
 	TTF_Quit();
 	SDL_Quit();
-}
-
-void GameSystem::PlayMusic()
-{
-	PongMusic = LMusic::LoadMusic(PongMusic, "Assets/Music/Music/Pong Music.mp3");
 }
