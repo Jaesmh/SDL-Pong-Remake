@@ -7,6 +7,8 @@ class LMusic
 {
 public:
 	LMusic();
+	static void PlayChunk(Mix_Chunk* Chunk);
+	static void PlayMusic(Mix_Music* Music);
 	static void LoadMusic(Mix_Music* Music, const std::string file_path);
 	static void LoadChunk(Mix_Chunk* Chunk, const std::string file_path);
 	static void FreeMusic(Mix_Music* Music);

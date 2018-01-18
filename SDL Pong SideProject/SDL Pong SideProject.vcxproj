@@ -114,12 +114,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Collisions.cpp" />
     <ClCompile Include="GameSystem.cpp" />
     <ClCompile Include="LMusic.cpp" />
     <ClCompile Include="LTexture.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Collisions.h" />
     <ClInclude Include="GameSystem.h" />
     <ClInclude Include="LMusic.h" />
     <ClInclude Include="LTexture.h" />

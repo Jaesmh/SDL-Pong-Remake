@@ -4,6 +4,24 @@ LMusic::LMusic()
 {
 }
 
+void LMusic::PlayChunk(Mix_Chunk * Chunk)
+{
+	Mix_PlayChannel(0, Chunk, 0);
+}
+
+void LMusic::PlayMusic(Mix_Music * Music)
+{
+	if (Mix_PlayingMusic() == NULL)
+	{
+		Mix_PlayMusic(Music, -1);
+	}
+
+	if (Mix_PausedMusic())
+	{
+		Mix_ResumeMusic();
+	}
+}
+
 void LMusic::LoadMusic(Mix_Music * Music, const std::string file_path)
 {
 	Music = Mix_LoadMUS(file_path.c_str());
